@@ -58,4 +58,4 @@ rq worker tweet
 rq worker reply
 rq worker quote
 ```
-queue filler: ``` queue_filler.py``` loop over user profile names and add them to the queue in order to launch the data collection process.
+• queue filler: ``` queue_filler.py``` loop over user profile names and add them to the queue in order to launch the data collection process.
