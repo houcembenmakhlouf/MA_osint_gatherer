@@ -10,6 +10,7 @@ Aachener Zeitung / Aachener Nachrichten,az_topnews
 ## data collection process
 
 This project uses scraping software packages. The new version of Twitter API called Twitter API V2 which offers new and more detailed data objects. Python packages such as ``` tweepy, snscrape and twarc2``` are utulized to build a data collector platform. This platform enables the scheduling of queuing jobs for retrieving the needed data and processing them in the background with workers. This part of the work can be extended by adding a user interface to facilitate its usage for non-technical persons.
+
 • SQLite database is utilized in order to save the tweets with their corresponding interactions. The data is organized in the tables as shown in the figure below:
 
 <p align="center">
