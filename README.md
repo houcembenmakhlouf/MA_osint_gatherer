@@ -9,7 +9,7 @@ Aachener Zeitung / Aachener Nachrichten,az_topnews
 ```
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/45092804/197497001-997885e8-7770-418e-8b77-ac340fa4de26.png" width="400"/>
+  <img src="https://user-images.githubusercontent.com/45092804/197497001-997885e8-7770-418e-8b77-ac340fa4de26.png" width="600"/>
 </p>
 
 
