@@ -17,7 +17,6 @@ This project uses scraping software packages. The new version of Twitter API cal
   <img src="https://user-images.githubusercontent.com/45092804/197497001-997885e8-7770-418e-8b77-ac340fa4de26.png" width="600"/>
 </p>
 
-## data preprocessing
 
 # OSINT-Gatherer
 
