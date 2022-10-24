@@ -30,6 +30,8 @@ Examples for tasks can be found in [`osint_gatherer/tasks`](osint_gatherer/tasks
 - redis
 - pipenv
 
+more packages are stored in ```requirements.txt```
+
 ## Install
 
 ```shell
@@ -49,3 +51,11 @@ Starter scripts for frontend, worker and scheduler are provided.
 ./run-scheduler.sh
 ./run-worker.sh
 ```
+customized worker straters( separately start worker for tweets, replies and quotes...)
+
+```
+rq worker tweet
+rq worker reply
+rq worker quote
+```
+queue filler: ``` queue_filler.py``` loop over user profile names and add them to the queue in order to launch the data collection process.
