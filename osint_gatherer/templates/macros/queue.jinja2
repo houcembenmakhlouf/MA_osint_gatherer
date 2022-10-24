@@ -1,0 +1,105 @@
+{% macro queue_table(jobs) -%}
+  {% if jobs %}
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Job</th>
+        <th>Args</th>
+        <th>Created</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for job in jobs %}
+        <tr>
+          <td>{{ job.func_name }}</td>
+          <td>{{ job.args }}</td>
+          <td>{{ job.created_at.strftime('%a, %d %b %Y %H:%M:%S') }}</td>
+          <td><a class="button is-danger is-small" href="{{ url_for('simple_job_cancel', job_id=job.id) }}">Cancel</a>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No jobs</p>
+  {% endif %}
+{%- endmacro %}
+
+{% macro scheduled_table(jobs) -%}
+  {% if jobs %}
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Task</th>
+        <th>Args</th>
+        <th>Created</th>
+        <th>Last Finished</th>
+        <th>Result</th>
+        <th>Meta</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for job in jobs %}
+        <tr>
+          <td>{{ job.func_name }}</td>
+          <td>{{ job.args }}</td>
+          <td>{{ job.created_at.strftime('%a, %d %b %Y %H:%M:%S') }}</td>
+          <td>
+            {% if job.ended_at %}
+              {{ job.ended_at.strftime('%a, %d %b %Y %H:%M:%S') }}
+            {% endif %}
+          </td>
+          <td>{{ job.result }}</td>
+          <td>
+            {% for k, v in job.meta.items() %}
+              <b>{{ k }}</b>: {{ v }}<br>
+            {% endfor %}
+          </td>
+          <td>
+            <a class="button is-danger is-small" href="{{ url_for('scheduled_job_cancel', job_id=job.id) }}">Cancel</a>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No jobs</p>
+  {% endif %}
+{%- endmacro %}
+
+{% macro finished_table(jobs) -%}
+  {% if jobs %}
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Task</th>
+        <th>Args</th>
+        <th>Created</th>
+        <th>Finished</th>
+        <th>Result</th>
+        <th>Meta</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for job in jobs %}
+        <tr>
+          <td>{{ job.func_name }}</td>
+          <td>{{ job.args }}</td>
+          <td>{{ job.created_at.strftime('%a, %d %b %Y %H:%M:%S') }}</td>
+          <td>{{ job.ended_at.strftime('%a, %d %b %Y %H:%M:%S') }}</td>
+          <td>{{ job.result }}</td>
+          <td>
+            {% for k, v in job.meta.items() %}
+              <b>{{ k }}</b>: {{ v }}<br>
+            {% endfor %}
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No jobs</p>
+  {% endif %}
+{%- endmacro %}

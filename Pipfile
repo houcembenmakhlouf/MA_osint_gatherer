@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flower = "*"
+flask = "*"
+rq = "*"
+rq-dashboard = "*"
+rq-scheduler = "*"
+flask-wtf = "*"
+twarc = "*"
+dataset = "*"
+pandas = "*"
+snscrape = "*"
+tweepy = "*"
+pysqlite3-binary = "*"
+torch = "*"
+matplotlib = "*"
+
+[dev-packages]
+black = "*"
+
+[requires]
+python_version = "3"
+
+[pipenv]
+allow_prereleases = true

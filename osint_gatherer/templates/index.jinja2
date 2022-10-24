@@ -1,0 +1,34 @@
+{% extends "base.jinja2" %}
+{% from 'macros/queue.jinja2' import queue_table, finished_table, scheduled_table %}
+{% block content %}
+  <h1 class="title">
+    Job Starter
+  </h1>
+  <p class="subtitle">
+    start your job here
+  </p>
+  <div class="buttons">
+    <a class="button is-primary" href="{{ url_for('example_job') }}">
+      Example
+    </a>
+  </div>
+
+  <h1 class="title">
+    Jobs Queue
+  </h1>
+
+  {{ queue_table(queued) }}
+
+  <h1 class="title">
+    Jobs Scheduled
+  </h1>
+
+  {{ scheduled_table(scheduled) }}
+
+  <h1 class="title">
+    Jobs Finished
+  </h1>
+
+  {{ finished_table(finished) }}
+
+{% endblock %}

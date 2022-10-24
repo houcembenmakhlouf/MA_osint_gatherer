@@ -1,0 +1,14 @@
+{% extends "base.jinja2" %}
+{% from 'macros/bulma_form.jinja2' import formfields %}
+{% block content %}
+  <h1 class="title">
+    Simple Job Starter
+  </h1>
+  <form method="post">
+    {{ formfields(form) }}
+    <div class="control">
+      <button class="button is-primary">Submit</button>
+      <button class="button is-primary">Add list</button>
+    </div>
+  </form>
+{% endblock %}
