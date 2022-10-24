@@ -7,10 +7,9 @@ The data input was based on news outlets but any other type of profile could be 
 name,twitter
 Aachener Zeitung / Aachener Nachrichten,az_topnews
 ```
-![image](https://user-images.githubusercontent.com/45092804/197497001-997885e8-7770-418e-8b77-ac340fa4de26.png)
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/45092804/197497001-997885e8-7770-418e-8b77-ac340fa4de26.png" />
+  <img src="https://user-images.githubusercontent.com/45092804/197497001-997885e8-7770-418e-8b77-ac340fa4de26.png" width="400"/>
 </p>
 
 
