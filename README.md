@@ -35,6 +35,10 @@ Examples for tasks can be found in [`osint_gatherer/tasks`](osint_gatherer/tasks
 ```shell
 pipenv install
 ```
+or with pip
+```
+pip install requirements.txt
+```
 
 ## Run
 
